@@ -6,5 +6,5 @@
 ## Visualizações
 
   ### - **[Quantos gols faz o Brasil?](Visualizacao/Brasil-WorldCup)**
-  ![Screenshot](Visualização/Brasil-WorldCup/Brasil-Gols-Copa.png)
+  ![Screenshot](Visualizacao/Brasil-WorldCup/Brasil-Gols-Copa.png)
 
