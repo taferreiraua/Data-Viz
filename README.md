@@ -5,6 +5,10 @@
 
 ## Visualizações
 
-  ### - **[Quantos gols faz o Brasil?](Visualizacao/Brasil-WorldCup)**
+  ### - **[Quantos gols faz a seleção brasileira?](Visualizacao/Brasil-WorldCup)**
   ![Screenshot](Visualizacao/Brasil-WorldCup/Brasil-Gols-Copa.png)
+  
+  ### - **[Pandemias/Epidemias mais mortais da história](Visualizacao/Maiores-Pand-Epid)**
+  Maiores surtos de doenças hankeados pelo número estimado de mortos.
+  ![Screenshot](Visualizacao/Maiores-Pand-Epid/Maiores-Pand-Epid.png)
 
