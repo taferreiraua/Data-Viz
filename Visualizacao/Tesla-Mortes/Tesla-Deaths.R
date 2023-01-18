@@ -60,20 +60,20 @@ mortes <- df %>%
 # mapeando os textos
 map_infos = data.frame(
   xleg = c("2016-06", "2016-09", "2017-07", "2018-03", "2018-11", "2019-05", "2020-02", "2020-08", "2021-06", "2021-10"),
-  yleg = c(91, 50, 81, 36, 120, 80, 150, 60, 127, 192),
-  legend = c("Elon Musk afirma que Teslas ser?o capazes de dirigir melhor que humanos dentro de 2 a 3 anos.",
-            "Joshua Brown morre enquanto usava o piloto autom?tico depois que seu Modelo S bateu na lateral de um trailer que atravessava uma estrada perto de Williston, Fl?rida.",
-            "Tesla ignora recomenda??o do NTSB de melhorar o monitoramento de motoristas enquanto eles est?o usando os sistemas.",
-            "Walter Huang, um funcion?rio da Apple, morre quando seu Model X bate em uma barreira em Mountain View, Calif?rnia, enquanto o piloto autom?tico est? em uso.",
+  yleg = c(91, 50, 81, 36, 120, 80, 150, 60, 125, 192),
+  legend = c("Elon Musk afirma que Teslas serão capazes de dirigir melhor que humanos dentro de 2 a 3 anos.",
+            "Joshua Brown morre enquanto usava o piloto automático depois que seu Modelo S bateu na lateral de um trailer que atravessava uma estrada perto de Williston, Flórida.",
+            "Tesla ignora recomendação do NTSB de melhorar o monitoramento de motoristas enquanto eles estão usando os sistemas.",
+            "Walter Huang, um funcionário da Apple, morre quando seu Model X bate em uma barreira em Mountain View, Califórnia, enquanto o piloto automático estava em uso.",
             "Elon Musk deixa o cargo de presidente da Tesla.",
-            "NTSB novamente critica o piloto autom?tico, dizendo que o design do Tesla torna muito f?cil para os motoristas se desligarem mentalmente da tarefa de dirigir.",
-            "A Consumer Reports testa o recurso Smart Summon da Tesla, que a montadora afirma poder ?convocar? um ve?culo Tesla para dirigir sozinho em um estacionamento sem nenhum ocupante dentro do ve?culo. Descobrimos que ele tem dificuldade em estacionar, cruza as linhas da pista e vagueia erraticamente ?como um motorista b?bado ou distra?do?.",
-            "David e Sheila Brown, que estavam casados h? 52 anos, s?o mortos em Saratoga, Calif?rnia, depois que seu Tesla saiu de uma rodovia. Documentos judiciais mostram que o piloto autom?tico estava ativo no momento do acidente.",
-            "A NHTSA abre uma investiga??o preliminar de defeito de seguran?a no piloto autom?tico. Membros do senado norte-americano pedem que a Federal Trade Commission investigue o que eles chamam de pr?ticas de marketing potencialmente enganosas da Tesla em torno do Autopilot e do FSD, incluindo o uso da frase ?full self-conduction? para um recurso que n?o torna um ve?culo totalmente aut?nomo.",
-            "S?o registrados 196 vitimas fatais de acidentes envolvendo Teslas em apenas um m?s no mundo todo."),
+            "NTSB novamente critica o piloto automático, dizendo que o design do Tesla torna muito fácil para os motoristas se desligarem mentalmente da tarefa de dirigir.",
+            'A Consumer Reports testa o recurso Smart Summon da Tesla, que a montadora afirma poder convocar um Tesla para dirigir sozinho em um estacionamento sem nenhum ocupante dentro do veículo. "Descobrimos que ele tem dificuldade em estacionar, cruza as linhas da pista e vagueia erraticamente como um motorista bêbado ou distraído?."',
+            "David e Sheila Brown, que estavam casados há 52 anos, são mortos em Saratoga, Califórnia, depois que seu Tesla saiu de uma rodovia. Documentos judiciais mostram que o piloto automático estava ativo no momento do acidente.",
+            "A NHTSA abre uma investigação preliminar de defeito de segurança no piloto automático. Membros do senado norte-americano pedem que a Federal Trade Commission investigue o que eles chamam de práticas de marketing potencialmente enganosas da Tesla em torno do Autopilot e do FSD, incluindo o uso da frase full self-conduction para um recurso que não torna um veículo totalmente autônomo.",
+            "São registrados 196 vitimas fatais de acidentes envolvendo Teslas em apenas um mês no mundo todo."),
   xyea = c("2016-06", "2016-09", "2017-07", "2018-03", "2018-11", "2019-05", "2020-02", "2020-08", "2021-06", "2021-10"),
-  yyea = c(79, 33, 69.6, 18.3, 113.7, 64.7, 120, 38.7, 89.45, 180.5),
-  years = c("Janeiro, 2016", "Maio, 2016", "Setembro, 2017", "Mar?o, 2018", "Setembro, 2018", 
+  yyea = c(79, 33, 69.6, 18.3, 113.7, 64.7, 120, 38.7, 89, 180.5),
+  years = c("Janeiro, 2016", "Maio, 2016", "Setembro, 2017", "Março, 2018", "Setembro, 2018", 
             "Agosto, 2019", "Outubro, 2019", "Agosto, 2020", "Agosto, 2021", "Maio, 2022")
   )
 
