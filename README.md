@@ -12,3 +12,6 @@
   Maiores surtos de doenças hankeados pelo número estimado de mortos.
   ![Screenshot](Visualizacao/Maiores-Pand-Epid/Maiores-Pand-Epid.png)
 
+  ### - **[Morte no piloto automático](Visualizacao/Tesla-Mortes)**
+  ![Screenshot](Visualizacao/Tesla-Mortes/Tesla-Deaths.png)
+
