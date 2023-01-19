@@ -14,4 +14,7 @@
 
   ### - **[Morte no piloto automático](Visualizacao/Tesla-Mortes)**
   ![Screenshot](Visualizacao/Tesla-Mortes/Tesla-Deaths.png)
+  
+  ### - **[Uma timeline dos acidentes aéreos no Nepal](Visualizacao/Nepal-Plane-Crashes)**
+  ![Screenshot](Visualizacao/Nepal-Plane-Crashes/Nepal-Airplane-Crashes.png)
 
