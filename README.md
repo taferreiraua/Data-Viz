@@ -5,16 +5,16 @@
 
 ## Visualizações
 
-  ### - **[Quantos gols faz a seleção brasileira?](Visualizacao/Brasil-WorldCup)**
-  ![Screenshot](Visualizacao/Brasil-WorldCup/Brasil-Gols-Copa.png)
+  ### - **[Quantos gols faz a seleção brasileira?](Brasil-WorldCup)**
+  ![Screenshot](Brasil-WorldCup/Brasil-Gols-Copa.png)
   
-  ### - **[Pandemias/Epidemias mais mortais da história](Visualizacao/Maiores-Pand-Epid)**
+  ### - **[Pandemias/Epidemias mais mortais da história](Major-Disease-Outbreaks)**
   Maiores surtos de doenças hankeados pelo número estimado de mortos.
-  ![Screenshot](Visualizacao/Maiores-Pand-Epid/Maiores-Pand-Epid.png)
+  ![Screenshot](Major-Disease-Outbreaks/Major-Disease-Outbreaks.png)
 
-  ### - **[Morte no piloto automático](Visualizacao/Tesla-Mortes)**
-  ![Screenshot](Visualizacao/Tesla-Mortes/Tesla-Deaths.png)
+  ### - **[Morte no piloto automático](Tesla-Deaths)**
+  ![Screenshot](Tesla-Deaths/Tesla-Deaths.png)
   
-  ### - **[Uma timeline dos acidentes aéreos no Nepal](Visualizacao/Nepal-Plane-Crashes)**
-  ![Screenshot](Visualizacao/Nepal-Plane-Crashes/Nepal-Airplane-Crashes.png)
+  ### - **[Uma timeline dos acidentes aéreos no Nepal](Nepal-Plane-Crashes)**
+  ![Screenshot](Nepal-Plane-Crashes/Nepal-Airplane-Crashes.png)
 
