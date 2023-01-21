@@ -17,4 +17,3 @@
   
   ### - **[Uma timeline dos acidentes aéreos no Nepal](Nepal-Plane-Crashes)**
   ![Screenshot](Nepal-Plane-Crashes/Nepal-Airplane-Crashes.png)
-
