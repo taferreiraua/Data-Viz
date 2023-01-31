@@ -6,13 +6,6 @@ library(png)
 library(ggimage)
 library(ggtext)
 
-caption <- paste0(
-  "<span style='font-family:fb;color:black'>&#xf099;</span>",
-  "<span style='font-family:opensans;'> @taferreiraua |</span>",
-  "<span style='font-family:fb;color:black'>&#xf09b;</span>",
-  "<span style='font-family:opensans;'> taferreiraua </span>",
-  "<span style='font-family:opensans;'>| Dados: rottentomatoes.com </span>")
-
 
 # dados
 df <- read.csv("~/mandalorian.csv")
@@ -23,6 +16,13 @@ sysfonts::font_add('skate sans', 'fontes/Skate Sans W00 Regular.otf')
 sysfonts::font_add_google("Open Sans","opensans")
 showtext::showtext_auto()
 showtext::showtext_opts(dpi=150)
+
+caption <- paste0(
+  "<span style='font-family:fb;color:black'>&#xf099;</span>",
+  "<span style='font-family:opensans;'> @taferreiraua |</span>",
+  "<span style='font-family:fb;color:black'>&#xf09b;</span>",
+  "<span style='font-family:opensans;'> taferreiraua </span>",
+  "<span style='font-family:opensans;'>| Dados: rottentomatoes.com </span>")
 
 # cores e imagens
 col_bars <- "firebrick1"
