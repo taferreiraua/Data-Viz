@@ -17,3 +17,6 @@
   
   ### - **[Uma timeline dos acidentes aéreos no Nepal](Nepal-Plane-Crashes)**
   ![Screenshot](Nepal-Plane-Crashes/Nepal-Airplane-Crashes.png)
+  
+  ### - **[Which director is the highest rated?](Mandalorian-Directors)**
+  ![Screenshot](Mandalorian-Directors/Mandalorian-Directors.png)
