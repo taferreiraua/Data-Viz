@@ -20,3 +20,6 @@
   
   ### - **[Which director is the highest rated?](Mandalorian-Directors)**
   ![Screenshot](Mandalorian-Directors/Mandalorian-Directors.png)
+  
+  ### - **[Covid-19 vaccination across the world](World-Vaccination-Covid19)**
+  ![Screenshot](World-Vaccination-Covid19/World-Vaccination-Covid19.png)
