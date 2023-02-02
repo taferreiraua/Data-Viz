@@ -22,7 +22,7 @@ caption <- paste0(
   "<span style='font-family:opensans;'> @taferreiraua |</span>",
   "<span style='font-family:fb;color:black'>&#xf09b;</span>",
   "<span style='font-family:opensans;'> taferreiraua </span>",
-  "<span style='font-family:opensans;'>| Dados: rottentomatoes.com </span>")
+  "<span style='font-family:opensans;'>| Source: rottentomatoes.com </span>")
 
 # cores e imagens
 col_bars <- "firebrick1"
