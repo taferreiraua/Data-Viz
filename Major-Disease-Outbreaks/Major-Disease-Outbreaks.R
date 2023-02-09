@@ -1,7 +1,6 @@
 library(tidyverse)
 library(sysfonts)
 library(showtext)
-library(ggimage)
 library(ggtext)
 
 
