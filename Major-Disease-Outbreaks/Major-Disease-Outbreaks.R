@@ -1,47 +1,38 @@
 library(tidyverse)
 library(sysfonts)
-library(showtext)
 library(ggtext)
+library(ggview)
 
 
-df <- read.csv("C:/Users/Thays Ferreira/Downloads/df_1.csv")
+df <- read.csv("~/MajorDeseaseOutbreaks.csv")
 
 
 # fontes
 sysfonts::font_add('fb', 'fontes/Font Awesome 6 Brands-Regular-400.otf')
 sysfonts::font_add_google("Open Sans", "opensans")
-sysfonts::font_add_google("Girassol", "girassol")
 showtext::showtext_auto()
 showtext::showtext_opts(dpi=176)
 
 
-# titulo
-titulo <- paste0(
-  "<br><span style='font-family:girassol;font-size:44pt;color:white;'> **Epidemias/Pandemias** <br> **mais mortais da historia** </span>"
-)
-
+# caption
 caption <- paste0(
-  "<span style='font-family:fb;'>&#xf099;</span>",
-  "<span style='font-family:opensans;'> @taferreiraua | </span>",
-  "<span style='font-family:fb;'>&#xf09b;</span>",
-  "<span style='font-family:opensans;'> taferreiraua </span>",
-  "<span style='font-family:opensans;'> | Dados: Centers for Disease Control and Prevention (CDC) </span>"
+  "<span style='font-family:fb;color:#212529;'>&#xf099;</span>",
+  "<span style='font-family:opensans;color:#212529;'> @taferreiraua | </span>",
+  "<span style='font-family:fb;color:#212529;'>&#xf09b;</span>",
+  "<span style='font-family:opensans;color:#212529;'> taferreiraua </span>",
+  "<span style='font-family:opensans;color:#212529;'> | Dados: Centers for Disease Control and Prevention (CDC) </span>"
 )
 
-
-# paleta
-color_bg <- "black"
-col_low <- "red"
-col_high <- "yellow"
-col_tit <- "white"
-col_nom <- "gold"
-
-
+# cores
+col_background = "#F8F9FA"
+col_bars = "#212529"
+    
+  
 # plot
-top7 <- df %>% 
-  filter(Location=="Worldwide") %>%
-  arrange(Rank) %>%
-  mutate(Hanking = 1:7,
+top7 <- df |> 
+  filter(Location=="Worldwide") |>
+  arrange(Rank) |>
+  mutate(Hanking = paste0(c(1:7), "º"),
          Lost.Popul = case_when(Death.toll=="17–100 million"~"17-100 milhões",
                                 Death.toll=="40.1 million (as of 2021)"~"40.1 milhões",
                                 Death.toll=="7–28 million (as of November 2022)"~"7-28 milhões",
@@ -51,39 +42,63 @@ top7 <- df %>%
                                 Death.toll=="1 million+"~"1 milhão",
                                 TRUE ~ Death.toll
                                 ),
-         Date = case_when(Date=="2019[c]–present"~"2019–presente",
-                          Date=="1981–present"~"1981–presente",
+         Date = case_when(Date=="2019[c]–present"~"2019-presente",
+                          Date=="1981–present"~"1981-presente",
                           TRUE ~ Date
                           ),
          Disease = case_when(Disease=="Influenza A/H1N1"~"H1N1",
                              Disease=="Influenza A/H2N2"~"H2N2",
                              Disease=="Influenza A/H3N2"~"H3N2",
                              Disease=="Cholera"~"Cólera",
+                             Disease=="COVID-19"~"Covid-19",
                              Disease=="Bubonic plague"~"Peste Bubônica",
                              TRUE ~ Disease)
-         ) %>%
-  select(Hanking, Hanking_label, Date, Disease, Lost.Popul)
+         ) |>
+  select(Hanking, Date, Disease, Lost.Popul) |>
+  mutate(n = -4:2) |>
+  rowwise() |>
+  mutate(
+    x = list(c(-6, 0, 0, -6)),
+    y = list(c(n*4 - 1.4, n*2 - 0.7, n*2 + 0.7, n*4 + 1.4))
+  ) |>
+  unnest(cols = c(x, y)) 
   
-# -Hanking
-top7 %>% ggplot(aes(-Hanking, rev(Hanking))) +
-  geom_col(aes(fill=Hanking)) +
-  scale_fill_gradient(low=col_low, high=col_high) +
-  geom_text(aes(label=Disease), nudge_y = 0.8, size=6, 
-            fontface="bold", family="opensans", color=col_nom) +
-  geom_text(aes(label=paste0('(', Date, ')')), nudge_y = 0.5, size=5.7,
-            fontface="bold", family="opensans", color=col_nom) +
-  geom_text(aes(label=Lost.Popul), nudge_y = 0.2, size=5.15, 
-            fontface="bold", family="opensans", color=col_tit) +
-  labs(title=titulo, caption=caption) +
+
+ggplot(top7) +
+  geom_rect(aes(xmin = -18.5, ymin = n*4 - 1.4,
+                xmax = -6, ymax = n*4 + 1.4), fill = col_bars, color = NA) +
+  geom_polygon(aes(x, y, group = n), fill = col_bars, color = NA) +
+  geom_rect(aes(xmin = 0, ymin = n*2 - 0.7,
+                xmax = 7, ymax = n*2 + 0.7), fill = col_bars, color = NA) +
+  geom_text(aes(-17.5, n*4, label = Disease), family = 'opensans', fontface = "bold",
+            color = col_background, hjust = 0, size = 12.5, check_overlap = T) +
+  geom_text(aes(7.5, n*2, label = Date), family = "opensans", fontface = "bold",
+            color = col_bars, hjust = 0, size = 5.9, check_overlap = T) +
+  geom_text(aes(6.5, n*2, label = Lost.Popul), family = "opensans", fontface = "bold",
+            color = col_background, hjust = 1, size = 5, check_overlap = TRUE) +
+  geom_text(aes(x=-20, y=n*4, label = Hanking), family = "opensans", fontface = "bold",
+            color = col_bars, hjust = .5, size=12, check_overlap = T) +
+  geom_text(aes(x=5.3, y=-16.5, label = str_wrap("As 7 epidemias/pandemias mais mortais da história", 25)),
+            color=col_bars, hjust = .5, size = 10, check_overlap = T, lineheight = 0.5,
+            family="opensans", fontface="bold") +
+  geom_text(aes(x=4, y=-11.5, label="Número estimado de mortos"), 
+            family="opensans", size=4.5, color=col_bars) +
+  geom_text(aes(x=9, y=7.5, label="Período de tempo"), 
+            family="opensans", size=4.5, color=col_bars) +
+  geom_segment(aes(x=4, xend=4, y=-11, yend=-9)) +
+  geom_segment(aes(x=9, xend=9, y=5, yend=7)) +
+  scale_y_reverse() +
+  scale_x_continuous(limits = c(-20, 12)) +
   theme_minimal() +
+  labs(caption=caption) +
   theme(
-    plot.background = element_rect(fill=color_bg, color=color_bg),
-    plot.title = element_textbox_simple(halign=0.5, maxwidth = unit(7, "in")),
-    plot.caption = element_markdown(size = 11.5, color="white"),
-    legend.position = "none",
+    plot.background = element_rect(fill=col_background, color=col_background),
+    plot.caption = element_markdown(size=12),
     panel.grid = element_blank(),
-    axis.title = element_blank(),
-    axis.text = element_blank()
+    axis.text = element_blank(),
+    axis.title = element_blank()
   )
 
-  ggsave("Maiores-Pand-Epid.png", width=10, height=6)
+
+ggview(units='px', height=1900, width=2400)  
+ggsave("Maiores-Pand-Epid.png", units='px', width=2400, height=1900)
