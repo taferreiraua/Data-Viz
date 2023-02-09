@@ -37,5 +37,5 @@
   
   ### **[Pandemias/Epidemias mais mortais da história](Major-Disease-Outbreaks)**
   Maiores surtos de doenças hankeados pelo número estimado de mortos.
-  ![Screenshot](Major-Disease-Outbreaks/Major-Disease-Outbreaks.png)
+  ![Screenshot](Major-Disease-Outbreaks/Maiores-Pand-Epid.png)
   
