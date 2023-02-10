@@ -27,7 +27,7 @@
   ![Screenshot](Mandalorian-Directors/Mandalorian-Directors.png)
   
   ### **[Quantos gols faz a seleção brasileira?](Brasil-WorldCup)**
-  ![Screenshot](Brasil-WorldCup/brasil-WorldCup.png)
+  ![Screenshot](Brasil-WorldCup/Brasil-WorldCup.png)
   
   ### **[Uma timeline dos acidentes aéreos no Nepal](Nepal-Plane-Crashes)**
   ![Screenshot](Nepal-Plane-Crashes/Nepal-Airplane-Crashes.png)
