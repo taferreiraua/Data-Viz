@@ -131,7 +131,7 @@ ggplot(brasil) +
   geom_point(data=min_gols, mapping=aes(x=Year, y=Gols.Avg), color=col_min, size=3.5) +
   geom_text(mapping=aes(x=1986, y=5.5, label=str_wrap("Média de gols por partida em copas do mundo conquistadas",25)),
             size=7.5, color=col_avg_line, lineheight=.5) +
-  geom_text(label=paste0("Média geral: ", round(Total.Gols.Avg,2)), mapping = aes(x=1950, y=Total.Gols.Avg-0.3), 
+  geom_text(label=paste0("Média geral: ", round(Total.Gols.Avg,2)), mapping = aes(x=1951, y=Total.Gols.Avg-0.4), 
             size=7.5, color=col_avg_line, fontface = "bold") +
   geom_text(data=map_years, mapping=aes(x=x, y=y, label=x), color=col_years, size=8, fontface = "bold") +
   geom_text(data=map_avg, mapping=aes(x=x, y=y, label=label), color=col_years, size=7.5, fontface = "bold") +
@@ -149,7 +149,7 @@ ggplot(brasil) +
             y=Gols.Avg, yend=Gols.Avg), color=col_max, linetype="dotted", linewidth=0.59) +
   geom_segment(data=min_gols, mapping=aes(x=Year, xend=Year+8.2,
             y=Gols.Avg, yend=Gols.Avg), color=col_min, linetype="dotted", linewidth=0.59) +
-  geom_curve(mapping=aes(x=1940, xend=1944, y=Total.Gols.Avg-0.06, yend=Total.Gols.Avg-0.4), 
+  geom_curve(mapping=aes(x=1940, xend=1944, y=Total.Gols.Avg-0.15, yend=Total.Gols.Avg-0.4), 
              color=col_avg_line, curvature=0.2, linewidth=0.3, arrow=arrow(length=unit(0.08,"in"))) +
   geom_curve(mapping=aes(x=1976, xend=1972, y=5.5, yend=4.8),
              color=col_avg_line, curvature=0.3, linewidth=0.3, arrow=arrow(length=unit(0.08,"in"))) +
@@ -170,4 +170,4 @@ ggplot(brasil) +
   
 
 ggview(units="px", height=2150, width=3000)
-ggsave(units="px", height=2150, width=3000, "Brasil-WorldCup.png")
+ggsave(units="px", height=2150, width=3000, "C:/Users/Thays Ferreira/Documents/Visualização de dados/Brasil WorldCup/Brasil-WorldCup.png")
