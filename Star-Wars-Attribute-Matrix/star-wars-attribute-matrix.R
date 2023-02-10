@@ -4,7 +4,6 @@ library(ggview)
 library(geomtextpath)
 library(ggimage)
 library(sysfonts)
-library(png)
 library(showtext)
 
 
