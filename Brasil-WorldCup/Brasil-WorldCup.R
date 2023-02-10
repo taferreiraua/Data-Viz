@@ -11,9 +11,9 @@ library(ggview)
 
 # ------ Leitura dos dados
 
-df <- read.csv("~/WorldCupMatches.csv") # dados de 1930-2014
-df2018 <- read.csv("~/FIFA - 2018.csv") # dados de 2018
-df2022 <- read.csv("~/FIFA - 2022.csv") # dados de 2022
+df <- read.csv("C:/Users/Thays Ferreira/Documents/Visualização de dados/Brasil WorldCup/Data/WorldCupMatches.csv") # dados de 1930-2014
+df2018 <- read.csv("C:/Users/Thays Ferreira/Documents/Visualização de dados/Brasil WorldCup/Data/FIFA - 2018.csv") # dados de 2018
+df2022 <- read.csv("C:/Users/Thays Ferreira/Documents/Visualização de dados/Brasil WorldCup/Data/FIFA - 2022.csv") # dados de 2022
 
 
 # ------ Aesthetic
@@ -94,7 +94,7 @@ brasil_tit_gols_avg <- brasil %>%
 
 anos = brasil_tit_gols_avg$Year
 gols = brasil_tit_gols_avg$Gols.Avg
-imagens = paste0("~/", anos, ".png")
+imagens = paste0("C:/Users/Thays Ferreira/Documents/Visualização de dados/Brasil WorldCup/Images/", anos, ".png")
 
 map_cup <- data.frame(x=anos, y=gols + c(1.8, -2, 2, -1.8, 2), imagem=imagens)
 
@@ -102,7 +102,8 @@ map_years <- data.frame(x=anos, y=gols + c(2.65, -2.85, 2.86, -2.65, 2.85))
 
 map_avg <- data.frame(x=anos + c(2, 1, 2, 2, 2), y=gols + c(0.2, 0.22, 0.22, -0.2, 0.22), label=round(gols, 2))
 
-map_stars <- data.frame(x=anos, y=gols + c(3, -3.23, 3.23, -3, 3.23), imagem=c(rep("~/star.png", 5)))
+map_stars <- data.frame(x=anos, y=gols + c(3, -3.23, 3.23, -3, 3.23), 
+                        imagem=c(rep("C:/Users/Thays Ferreira/Documents/Visualização de dados/Brasil WorldCup/Images/star.png", 5)))
 
 map_segm <- data.frame(x=anos, xend=anos, y=gols, yend=gols + c(1.2, -1.4, 1.3, -1.2, 1.4))
 
@@ -122,14 +123,14 @@ min_gols <- brasil %>% group_by(Year) %>%
 
 ## plot
 ggplot(brasil) +
+  geom_segment(mapping = aes(x=min(Year), xend=max(Year), y=Total.Gols.Avg, 
+                             yend=Total.Gols.Avg), color=col_avg_line, linewidth=0.7) +
   geom_line(aes(Year, Gols.Avg), color=col_line, linewidth=1.4) +
   geom_point(data=map_point, mapping=aes(x=x, y=y), color=col_years, size=3.5) +
   geom_point(data=max_gols, mapping=aes(x=Year, y=Gols.Avg), color=col_max, size=3.5) +
   geom_point(data=min_gols, mapping=aes(x=Year, y=Gols.Avg), color=col_min, size=3.5) +
-  geom_text(mapping=aes(x=1986, y=5.5, label=str_wrap("Média de gols por partida em copas do mundo",25)),
+  geom_text(mapping=aes(x=1986, y=5.5, label=str_wrap("Média de gols por partida em copas do mundo conquistadas",25)),
             size=7.5, color=col_avg_line, lineheight=.5) +
-  geom_text(mapping=aes(x=1980, y=0, label="Título conquistado"),
-            size=7.5, color=col_avg_line) +
   geom_text(label=paste0("Média geral: ", round(Total.Gols.Avg,2)), mapping = aes(x=1950, y=Total.Gols.Avg-0.3), 
             size=7.5, color=col_avg_line, fontface = "bold") +
   geom_text(data=map_years, mapping=aes(x=x, y=y, label=x), color=col_years, size=8, fontface = "bold") +
@@ -148,13 +149,9 @@ ggplot(brasil) +
             y=Gols.Avg, yend=Gols.Avg), color=col_max, linetype="dotted", linewidth=0.59) +
   geom_segment(data=min_gols, mapping=aes(x=Year, xend=Year+8.2,
             y=Gols.Avg, yend=Gols.Avg), color=col_min, linetype="dotted", linewidth=0.59) +
-  geom_segment(mapping = aes(x=min(Year), xend=max(Year), y=Total.Gols.Avg, 
-                             yend=Total.Gols.Avg), color=col_avg_line, linewidth=0.7) +
-  geom_curve(mapping=aes(x=1940, xend=1943, y=Total.Gols.Avg-0.06, yend=Total.Gols.Avg-0.3), 
+  geom_curve(mapping=aes(x=1940, xend=1944, y=Total.Gols.Avg-0.06, yend=Total.Gols.Avg-0.4), 
              color=col_avg_line, curvature=0.2, linewidth=0.3, arrow=arrow(length=unit(0.08,"in"))) +
-  geom_curve(mapping=aes(x=1977, xend=1972, y=5.5, yend=4.8),
-             color=col_avg_line, curvature=0.3, linewidth=0.3, arrow=arrow(length=unit(0.08,"in"))) +
-  geom_curve(mapping=aes(x=1980, xend=1991.5, y=-0.3, yend=-1.1),
+  geom_curve(mapping=aes(x=1976, xend=1972, y=5.5, yend=4.8),
              color=col_avg_line, curvature=0.3, linewidth=0.3, arrow=arrow(length=unit(0.08,"in"))) +
   scale_y_continuous(limits=c(-1.5,8)) +
   geom_image(data=map_stars, mapping=aes(x=x, y=y, image=imagem), size=0.025, asp=1.5) +
@@ -170,8 +167,7 @@ ggplot(brasil) +
         panel.grid = element_blank(),
         axis.title = element_blank(),
         axis.text = element_blank())
+  
 
-
-  ggview(units="px", height=2150, width=3000)
-  ggsave(units="px", height=2150, width=3000, "brasil-world-cup.png")
- 
+ggview(units="px", height=2150, width=3000)
+ggsave(units="px", height=2150, width=3000, "Brasil-WorldCup.png")
