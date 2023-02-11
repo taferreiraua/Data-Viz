@@ -11,9 +11,9 @@ library(ggview)
 
 # ------ Leitura dos dados
 
-df <- read.csv("C:/Users/Thays Ferreira/Documents/Visualização de dados/Brasil WorldCup/Data/WorldCupMatches.csv") # dados de 1930-2014
-df2018 <- read.csv("C:/Users/Thays Ferreira/Documents/Visualização de dados/Brasil WorldCup/Data/FIFA - 2018.csv") # dados de 2018
-df2022 <- read.csv("C:/Users/Thays Ferreira/Documents/Visualização de dados/Brasil WorldCup/Data/FIFA - 2022.csv") # dados de 2022
+df <- read.csv("https://raw.githubusercontent.com/taferreiraua/Estudos-de-Exploracao-e-Visualizacao-de-Dados/main/Brasil-WorldCup/Dados/WorldCupMatches.csv") # dados de 1930-2014
+df2018 <- read.csv("https://raw.githubusercontent.com/taferreiraua/Estudos-de-Exploracao-e-Visualizacao-de-Dados/main/Brasil-WorldCup/Dados/FIFA%20-%202018.csv") # dados de 2018
+df2022 <- read.csv("https://raw.githubusercontent.com/taferreiraua/Estudos-de-Exploracao-e-Visualizacao-de-Dados/main/Brasil-WorldCup/Dados/FIFA%20-%202022.csv") # dados de 2022
 
 
 # ------ Aesthetic
@@ -94,7 +94,7 @@ brasil_tit_gols_avg <- brasil %>%
 
 anos = brasil_tit_gols_avg$Year
 gols = brasil_tit_gols_avg$Gols.Avg
-imagens = paste0("C:/Users/Thays Ferreira/Documents/Visualização de dados/Brasil WorldCup/Images/", anos, ".png")
+imagens = paste0("https://raw.githubusercontent.com/taferreiraua/Estudos-de-Exploracao-e-Visualizacao-de-Dados/main/Brasil-WorldCup/Imagens/", anos, ".png")
 
 map_cup <- data.frame(x=anos, y=gols + c(1.8, -2, 2, -1.8, 2), imagem=imagens)
 
@@ -103,7 +103,7 @@ map_years <- data.frame(x=anos, y=gols + c(2.65, -2.85, 2.86, -2.65, 2.85))
 map_avg <- data.frame(x=anos + c(2, 1, 2, 2, 2), y=gols + c(0.2, 0.22, 0.22, -0.2, 0.22), label=round(gols, 2))
 
 map_stars <- data.frame(x=anos, y=gols + c(3, -3.23, 3.23, -3, 3.23), 
-                        imagem=c(rep("C:/Users/Thays Ferreira/Documents/Visualização de dados/Brasil WorldCup/Images/star.png", 5)))
+                        imagem=c(rep("https://raw.githubusercontent.com/taferreiraua/Estudos-de-Exploracao-e-Visualizacao-de-Dados/main/Brasil-WorldCup/Imagens/star.png", 5)))
 
 map_segm <- data.frame(x=anos, xend=anos, y=gols, yend=gols + c(1.2, -1.4, 1.3, -1.2, 1.4))
 
@@ -171,3 +171,4 @@ ggplot(brasil) +
 
 ggview(units="px", height=2150, width=3000)
 ggsave(units="px", height=2150, width=3000, "C:/Users/Thays Ferreira/Documents/Visualização de dados/Brasil WorldCup/Brasil-WorldCup.png")
+  
