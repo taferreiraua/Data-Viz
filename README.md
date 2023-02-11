@@ -24,7 +24,7 @@
   ![Screenshot](World-Vaccination-Covid19/World-Vaccination-Covid19.png)
   
   ### **[Which director is the highest rated?](Mandalorian-Directors)**
-  ![Screenshot](Mandalorian-Directors/Mandalorian-Directors.png)
+  ![Screenshot](Mandalorian-Directors/Mandalorian-Directors-Plot.png)
   
   ### **[Quantos gols faz a seleção brasileira?](Brasil-WorldCup)**
   ![Screenshot](Brasil-WorldCup/Brasil-WorldCup.png)
