@@ -18,7 +18,7 @@
 ## Galeria
 
   ### **[Star Wars Attribute Matrix](Star-Wars-Attribute-Matrix)**
-  ![Screenshot](Star-Wars-Attribute-Matrix/star-wars-attribute-matrix.png)
+  ![Screenshot](Star-Wars-Attribute-Matrix/Star-Wars-Attribute-Matrix.png)
   
   ### **[Covid-19 vaccination across the world](World-Vaccination-Covid19)**
   ![Screenshot](World-Vaccination-Covid19/World-Vaccination-Covid19.png)
