@@ -85,7 +85,7 @@ coord_radar <- function (theta = "x", start = 0, direction = 1)
 
 
 # dados
-df = read.csv("~/starwars.csv")
+df = read.csv("https://raw.githubusercontent.com/taferreiraua/Estudos-de-Exploracao-e-Visualizacao-de-Dados/main/Star-Wars-Attribute-Matrix/Data/starwars.csv")
 
 # fontes
 sysfonts::font_add('starwars', 'fontes/Starjedi.ttf')
@@ -112,6 +112,7 @@ caption <- paste0(
 
 # manipulação de dados
 starwars = df |>
+  select(character, item, avg_rating) |>
   filter(item %in% c('loyal (not traitorous)', 'heroic (not villainous)', 'emotional (not unemotional)', 
                      'empath (not psychopath)', 'devoted (not unfaithful)', 'persistent (not quitter)', 
                      'idealist (not realist)', 'emotional (not logical)', 'competent (not incompetent)', 
@@ -141,10 +142,13 @@ starwars = df |>
       item=='realist (not idealist)'~'idealist',
       item=='psychopath (not empath)'~'empath',
       item=='villainous (not heroic)'~'heroic')) |>
+  group_by(character, item) |>
+  mutate(avg_rating = mean(avg_rating)) |>
+  ungroup() |>
+  distinct(item, character, avg_rating) |>
   arrange(character, item) |>
   mutate(
-    images = c(rep("~/c3po.png", 9), rep("~/vader.png", 10), rep("~/han.png", 10),
-               rep("~/luke.png", 10), rep("~/obk.png", 9), rep("~/leia.png", 9)),
+    images = paste0("https://raw.githubusercontent.com/taferreiraua/Estudos-de-Exploracao-e-Visualizacao-de-Dados/main/Star-Wars-Attribute-Matrix/Images/", str_replace(str_replace_all(character, " ", "-"), "\\.", ""), ".png"),
     item = toupper(item)
   )
 
@@ -184,4 +188,4 @@ plot = ggplot(starwars, aes(x=item, y=avg_rating, group=character)) +
   )
 
 ggview(units='px', height=5000, width=6000)
-ggsave(units='px', height=5000, width=6000, filename = "star-wars-attribute-matrix.png") 
+ggsave(units='px', height=5000, width=6000, filename = "C:/Users/Thays Ferreira/Documents/Visualização de dados/Star Wars Attribute Matrix/star-wars-attribute-matrix.png") 
