@@ -1,4 +1,5 @@
-library(tidyverse)
+library(tidyverse) 
+library(ggtext) 
 library(ggview)
 
 
@@ -13,7 +14,7 @@ sysfonts::font_add_google("Quicksand","quicksand")
 showtext::showtext_auto()
 showtext::showtext_opts(dpi=150)
 
-title = "<span style='font-family:montserrat;font-size:25pt;colour:#242423;'><br> Demanda de energia elétrica no Brasil em 2022 <br></span>"
+title = "<span style='font-family:montserrat;font-size:25pt;colour:#242423;'><br> Demanda de energia elétrica por dia no Brasil em 2022 <br></span>"
 caption = paste0(
   "<span style='font-family:fb;color:#B22222;'><br><br><br><br>&#xf099;</span>",
   "<span style='font-family:opensans;'> @taferreiraua |</span>",
@@ -27,22 +28,20 @@ colnames(df) = c('data', 'demanda')
 brasil = df |>
   filter(grepl("2022", data)) |>
   mutate(data = as.Date(data),
-         mes = as.numeric(format(data, "%m")),
+         mes = as.numeric(format(data, '%m')),
+         mes_label = toupper(format(data, "%b", lang="pt_BR")),
          dia = as.numeric(format(data,"%d"))) |>
   group_by(mes, dia) |>
   mutate(valor = sum(demanda)) |>
   ungroup() |>
-  select(mes, dia, valor)
+  select(mes, mes_label, dia, valor)
 
 # plot
 ggplot(brasil) +
-  geom_tile(aes(x=dia, y=mes, fill=valor), color='white', size=.5) +
+  geom_tile(aes(x=dia, y=reorder(mes_label, desc(mes)), fill=valor), color='white', size=.5) +
   coord_fixed() +
   scale_x_continuous(sec.axis = dup_axis(), breaks = 1:31) +
-  scale_y_reverse(breaks = 1:12, 
-                  labels=c('JAN', 'FEV', 'MAR', 'ABR', 'MAI', 'JUN',
-                           'JUL', 'AGO', 'SET', 'OUT', 'NOV', 'DEZ')) +
-  scale_fill_gradient(low='skyblue', high='red', labels=scales::label_comma()) +
+  scale_fill_gradient(low='#31D3FF', high='#FA0041', labels=scales::label_comma()) +
   theme_minimal() +
   labs(title=title, caption=caption, fill='Demanda') +
   theme(
@@ -54,11 +53,11 @@ ggplot(brasil) +
     legend.title = element_blank(),
     legend.text = element_text(family='quicksand'),
     legend.position = 'bottom',
-    legend.margin = margin(t=-15, b=6),
+    legend.margin = margin(t=-5, b=6),
     axis.title = element_blank(),
     axis.text.x.bottom = element_blank(),
     axis.text.y = element_text(size=12, family='quicksand', margin=margin(r=-22)),
-    axis.text.x.top = element_text(size=12, family='quicksand', margin=margin(b=-6.5))) +
+    axis.text.x.top = element_text(size=12, family='quicksand')) +
   guides(fill = guide_legend(label.position = 'bottom',
                              title.vjust = .8,
                              keyheight = unit(.09, 'in'),
