@@ -7,13 +7,14 @@
 
 | **Tópico**                                                              | **Packages**                          | **Dados**                                  |
 |:------------------------------------------------------------------------|:--------------------------------------|:-------------------------------------------|
-| [Star Wars Attribute Matrix](Star-Wars-Attribute-Matrix)                | ggplot, ggtext, ggimage               |  Open-Source Psychometrics                  |
+| [Star Wars Attribute Matrix](Star-Wars-Attribute-Matrix)                | ggplot, ggtext, ggimage               | Open-Source Psychometrics                  |
 | [Quantos gols faz a seleção brasileira?](Brasil-WorldCup)               | ggplot, ggtext, ggimage               | FIFA World Cup Archive                     |
 | [Pandemias/Epidemias mais mortais da história](Major-Disease-Outbreaks) | ggplot, ggtext                        | Centers for Disease Control and Prevention |
 | [Morte no piloto automático](Tesla-Deaths)                              | ggplot, ggtext, ggimage               | Tesla Deaths Website                       |
 | [Uma timeline dos acidentes aéreos no Nepal](Nepal-Plane-Crashes)       | ggplot, ggtext, ggimage               | Plane Crash Info                           |
 | [Which director is the highest rated?](Mandalorian-Directors)           | ggplot, ggtext, ggimage, ggpubr       | Rotten Tomatoes                            |
 | [Covid-19 vaccination across the world](World-Vaccination-Covid19)      | ggplot, ggtext                        | Our World In Data                          |
+| [Demanda de energia elétrica no Brasil em 2022](Brasil-ONS)             | ggplot                                | Operador Nacional do Sistema Elétrico (ONS)|
 
 ## Galeria
 
@@ -31,6 +32,9 @@
   
   ### **[Uma timeline dos acidentes aéreos no Nepal](Nepal-Plane-Crashes)**
   ![Screenshot](Nepal-Plane-Crashes/Nepal-Airplane-Crashes.png)
+  
+  ### **[Demanda de energia elétrica no Brasil em 2022](Brasil-ONS)**
+  ![Screenshot](Brasil-ONS/Brasil-ONS.png)
   
   ### **[Morte no piloto automático](Tesla-Deaths)**
   ![Screenshot](Tesla-Deaths/Tesla-Deaths.png)
