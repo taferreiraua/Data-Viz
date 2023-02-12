@@ -3,7 +3,7 @@ library(ggview)
 
 
 # dados
-df = read.csv('~/energy_demand_hourly_brazil.csv')
+df = read.csv('https://raw.githubusercontent.com/taferreiraua/Estudos-de-Exploracao-e-Visualizacao-de-Dados/main/Brasil-ONS/Dados/energy_demand_hourly_brazil.csv')
 
 # fontes e elementos de texto
 sysfonts::font_add('fb', 'fontes/Font Awesome 6 Brands-Regular-400.otf')
