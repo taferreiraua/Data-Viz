@@ -26,7 +26,7 @@ caption <- paste0(
 
 # cores e imagens
 col_bars <- "firebrick1"
-  img <- readPNG("https://raw.githubusercontent.com/taferreiraua/Estudos-de-Exploracao-e-Visualizacao-de-Dados/blob/main/Mandalorian-Directors/Images/poster.png")
+  img <- readPNG("https://raw.githubusercontent.com/taferreiraua/Estudos-de-Exploracao-e-Visualizacao-de-Dados/main/Mandalorian-Directors/Images/poster.png")
   imagens <- c("~/filoni.png", "~/rick.png", "~/chow.png", "~/bryce.png", "~/filoni.png",
                "~/rick.png", "~/chow.png", "~/taika.png")
   names <- c("Dave Filoni", "Rick Famuyiwa", "Deborah Chow", "Bryce Dallas Howard", 
