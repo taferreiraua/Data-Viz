@@ -14,7 +14,7 @@
 | [Uma timeline dos acidentes aéreos no Nepal](Nepal-Plane-Crashes)       | ggplot, ggtext, ggimage               | Plane Crash Info                           |
 | [Which director is the highest rated?](Mandalorian-Directors)           | ggplot, ggtext, ggimage, ggpubr       | Rotten Tomatoes                            |
 | [Covid-19 vaccination across the world](World-Vaccination-Covid19)      | ggplot, ggtext                        | Our World In Data                          |
-| [Demanda de energia elétrica por dia no Brasil em 2022](Brasil-ONS)     | ggplot                                | Operador Nacional do Sistema Elétrico (ONS)|
+| [Demanda de energia elétrica no Brasil em 2022](Brasil-ONS)             | ggplot, ggdraw                        | Operador Nacional do Sistema Elétrico (ONS)|
 
 ## Galeria
 
@@ -33,8 +33,8 @@
   ### **[Uma timeline dos acidentes aéreos no Nepal](Nepal-Plane-Crashes)**
   ![Screenshot](Nepal-Plane-Crashes/Nepal-Airplane-Crashes.png)
   
-  ### **[Demanda de energia elétrica por dia no Brasil em 2022](Brasil-ONS)**
-  ![Screenshot](Brasil-ONS/Brasil-ONS-Plot.png)
+  ### **[Demanda de energia elétrica no Brasil em 2022](Brasil-ONS)**
+  ![Screenshot](Brasil-ONS/Brasil-ONS.png)
   
   ### **[Morte no piloto automático](Tesla-Deaths)**
   ![Screenshot](Tesla-Deaths/Tesla-Deaths.png)
