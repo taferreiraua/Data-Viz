@@ -4,7 +4,7 @@ library(ggtext)
 library(ggview)
 
 
-df <- read.csv("~/MajorDeseaseOutbreaks.csv")
+df <- read.csv("https://raw.githubusercontent.com/taferreiraua/Estudos-de-Exploracao-e-Visualizacao-de-Dados/main/Major-Disease-Outbreaks/Dados/MajorDeseaseOutbreaks.csv")
 
 
 # fontes
