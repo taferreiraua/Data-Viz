@@ -90,4 +90,4 @@ ggplot(vangogh) +
 
 
 ggview(units='px', height=4200, width=2700)
-ggsave(units='px', height=4000, width=2700, filename='Van-Gogh-Styles.png')
+ggsave(units='px', height=4200, width=2700, filename='Van-Gogh-Styles.png')
