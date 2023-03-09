@@ -3,11 +3,12 @@ pacman::p_load(tidyverse,
                ggtext,
                ggview)
 
-# Data from WikiArt by Konstantinos Katserelis.
 
 # dados
-df <- read.csv("C:/Users/Thays Ferreira/Downloads/df.csv")
+df <- read.csv('https://raw.githubusercontent.com/taferreiraua/Estudos-de-Exploracao-e-Visualizacao-de-Dados/main/Van-Gogh-Styles/Data/Van-Gogh.csv')
 
+
+# elementos textuais
 c(sysfonts::font_add('fb', 'fontes/Font Awesome 6 Brands-Regular-400.otf'),
   sysfonts::font_add_google("Spectral","spectral"),
   sysfonts::font_add_google("Open Sans","opensans"),
@@ -27,6 +28,7 @@ caption = paste0("<span style='font-size:17pt;font-family:fb;color:#111111;'>&#x
                  "<span style='font-size:18pt;font-family:quicksand;color:#111111;'> @taferreiraua </span>",
                  "<span style='font-size:17pt;font-family:fb;color:#111111;'> &#xf09b;</span>",
                  "<span style='font-size:18pt;font-family:quicksand;color:#111111;'> taferreiraua</span>")
+
 
 # manipulação de dados
 vangogh = df |>
@@ -63,7 +65,7 @@ pal = c('ANIMALS'='#FFF702',
         'STILL LIFE'='#BE0AFF'
         )
 
-#Distribution of genres per style. Number of paintings per style.
+
 # plot
 ggplot(vangogh) +
   geom_bar(aes(x=reorder(Style, Num.Paintings), y=Count, fill=Genre), 
@@ -88,5 +90,4 @@ ggplot(vangogh) +
 
 
 ggview(units='px', height=4200, width=2700)
-ggsave(units='px', height=4000, width=2700, filename='van-gogh-colors.png')
-
+ggsave(units='px', height=4000, width=2700, filename='Van-Gogh-Styles.png')
