@@ -23,7 +23,7 @@
   ![Screenshot](Star-Wars-Attribute-Matrix/Star-Wars-Attribute-Matrix.png)
   
   ### **[Van Gogh's Styles & Subjects](Van-Gogh-Styles)**
-  ![Screenshot](Van-Gogh-Styles/Van-Gogh-Styles.png)
+  ![Screenshot](Van-Gogh-Styles/Van-Gogh-Styles-Subjects.png)
   
   ### **[Covid-19 vaccination across the world](World-Vaccination-Covid19)**
   ![Screenshot](World-Vaccination-Covid19/World-Vaccination-Covid19.png)
