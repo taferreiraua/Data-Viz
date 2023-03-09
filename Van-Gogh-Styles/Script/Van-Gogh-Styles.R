@@ -17,7 +17,7 @@ c(sysfonts::font_add('fb', 'fontes/Font Awesome 6 Brands-Regular-400.otf'),
   showtext::showtext_opts(dpi=150))
 
 title = paste0("<span style='font-family:spectral;font-size:95pt;color:#111111;'>**VAN GOGH'S**<br></span>",
-               "<span style='font-family:spectral;font-size:47pt;color:#111111;'>Style & Subjects</span>")
+               "<span style='font-family:spectral;font-size:47pt;color:#111111;'>Styles & Subjects</span>")
 subtitle = paste0("<span style='font-family:quicksand;font-size:21pt;color:#111111;'>**Vincent Van Gogh is one of the most influential painters in the history of Western art.**<br></span>",
                   "<span style='font-family:quicksand;font-size:21pt;color:#111111;'>Passing through Impressionism, Japonism, and Realism, the artist became a key figure in the world<br></span>",
                   "<span style='font-family:quicksand;font-size:21pt;color:#111111;'>of Post-Impressionism. He produced over 2000 works, with subjects including cloudscapes, still lifes,<br></span>",
@@ -90,4 +90,4 @@ ggplot(vangogh) +
 
 
 ggview(units='px', height=4200, width=2700)
-ggsave(units='px', height=4200, width=2700, filename='Van-Gogh-Styles.png')
+ggsave(units='px', height=4200, width=2700, filename='Van-Gogh-Styles-Subjects.png')
