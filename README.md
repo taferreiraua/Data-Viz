@@ -8,6 +8,7 @@
 | **Tópico**                                                              | **Packages**                          | **Dados**                                  |
 |:------------------------------------------------------------------------|:--------------------------------------|:-------------------------------------------|
 | [Star Wars Attribute Matrix](Star-Wars-Attribute-Matrix)                | ggplot, ggtext, ggimage               | Open-Source Psychometrics                  |
+| [Van Gogh's Styles & Subjects](Van-Gogh-Styles)                         | ggplot, ggtext                        | WikiArt by Konstantinos Katserelis         |
 | [Quantos gols faz a seleção brasileira?](Brasil-WorldCup)               | ggplot, ggtext, ggimage               | FIFA World Cup Archive                     |
 | [Pandemias/Epidemias mais mortais da história](Major-Disease-Outbreaks) | ggplot, ggtext                        | Centers for Disease Control and Prevention |
 | [Morte no piloto automático](Tesla-Deaths)                              | ggplot, ggtext, ggimage               | Tesla Deaths Website                       |
