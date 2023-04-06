@@ -10,7 +10,6 @@
 | [Star Wars Attribute Matrix](Star-Wars-Attribute-Matrix)                | ggplot, ggtext, ggimage               | Open-Source Psychometrics                  |
 | [Van Gogh's Styles & Subjects](Van-Gogh-Styles)                         | ggplot, ggtext                        | WikiArt by Konstantinos Katserelis         |
 | [Quantos gols faz a seleção brasileira?](Brasil-WorldCup)               | ggplot, ggtext, ggimage               | FIFA World Cup Archive                     |
-| [Pandemias/Epidemias mais mortais da história](Major-Disease-Outbreaks) | ggplot, ggtext                        | Centers for Disease Control and Prevention |
 | [Morte no piloto automático](Tesla-Deaths)                              | ggplot, ggtext, ggimage               | Tesla Deaths Website                       |
 | [Uma timeline dos acidentes aéreos no Nepal](Nepal-Plane-Crashes)       | ggplot, ggtext, ggimage               | Plane Crash Info                           |
 | [Which director is the highest rated?](Mandalorian-Directors)           | ggplot, ggtext, ggimage, ggpubr       | Rotten Tomatoes                            |
@@ -42,7 +41,5 @@
   
   ### **[Morte no piloto automático](Tesla-Deaths)**
   ![Screenshot](Tesla-Deaths/Tesla-Deaths.png)
-  
-  ### **[Pandemias/Epidemias mais mortais da história](Major-Disease-Outbreaks)**
-  ![Screenshot](Major-Disease-Outbreaks/Maiores-Pand-Epid.png)
+ 
   
