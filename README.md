@@ -15,7 +15,7 @@
   ![Screenshot](Mandalorian-Directors/Mandalorian-Directors-Plot.png)
   
   ### **[Quantos gols faz a seleção brasileira?](Brasil-WorldCup)**
-  ![Screenshot](Brasil-WorldCup/Brasil-WorldCup.png)
+  ![Screenshot](Brasil-WorldCup/Brasil-Copa.png)
   
   ### **[Demanda de energia elétrica no Brasil em 2022](Brasil-ONS)**
   ![Screenshot](Brasil-ONS/BrasilONS.png)
