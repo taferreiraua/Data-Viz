@@ -3,7 +3,6 @@
 ## Sobre
  Estudando meios de exploração e visualização de dados em R e Python.
 
-## Galeria
 
   ### **[Van Gogh's Styles & Subjects](Van-Gogh-Styles)**
   ![Screenshot](Van-Gogh-Styles/Van-Gogh-Styles-Subjects.png)
