@@ -7,20 +7,15 @@
 
 | **Tópico**                                                              | **Packages**                          | **Dados**                                  |
 |:------------------------------------------------------------------------|:--------------------------------------|:-------------------------------------------|
-| [Star Wars Attribute Matrix](Star-Wars-Attribute-Matrix)                | ggplot, ggtext, ggimage               | Open-Source Psychometrics                  |
 | [Van Gogh's Styles & Subjects](Van-Gogh-Styles)                         | ggplot, ggtext                        | WikiArt by Konstantinos Katserelis         |
 | [Quantos gols faz a seleção brasileira?](Brasil-WorldCup)               | ggplot, ggtext, ggimage               | FIFA World Cup Archive                     |
 | [Morte no piloto automático](Tesla-Deaths)                              | ggplot, ggtext, ggimage               | Tesla Deaths Website                       |
-| [Uma timeline dos acidentes aéreos no Nepal](Nepal-Plane-Crashes)       | ggplot, ggtext, ggimage               | Plane Crash Info                           |
 | [Which director is the highest rated?](Mandalorian-Directors)           | ggplot, ggtext, ggimage, ggpubr       | Rotten Tomatoes                            |
 | [Covid-19 vaccination across the world](World-Vaccination-Covid19)      | ggplot, ggtext                        | Our World In Data                          |
 | [Demanda de energia elétrica no Brasil em 2022](Brasil-ONS)             | ggplot, ggdraw                        | Operador Nacional do Sistema Elétrico (ONS)|
 
 ## Galeria
 
-  ### **[Star Wars Attribute Matrix](Star-Wars-Attribute-Matrix)**
-  ![Screenshot](Star-Wars-Attribute-Matrix/Star-Wars-Attribute-Matrix.png)
-  
   ### **[Van Gogh's Styles & Subjects](Van-Gogh-Styles)**
   ![Screenshot](Van-Gogh-Styles/Van-Gogh-Styles-Subjects.png)
   
@@ -32,9 +27,6 @@
   
   ### **[Quantos gols faz a seleção brasileira?](Brasil-WorldCup)**
   ![Screenshot](Brasil-WorldCup/Brasil-WorldCup.png)
-  
-  ### **[Uma timeline dos acidentes aéreos no Nepal](Nepal-Plane-Crashes)**
-  ![Screenshot](Nepal-Plane-Crashes/Nepal-Airplane-Crashes.png)
   
   ### **[Demanda de energia elétrica no Brasil em 2022](Brasil-ONS)**
   ![Screenshot](Brasil-ONS/Brasil-ONS.png)
