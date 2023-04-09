@@ -1,7 +1,7 @@
 # Estudos de Exploração e Visualização de Dados
+Estudando meios de exploração e visualização de dados.
 
-## Sobre
- Estudando meios de exploração e visualização de dados em R e Python.
+---
 
   ### **[_Van Gogh's Styles & Subjects_](Van-Gogh-Styles)**
   Visualizando a distribuição dos temas de 1931 obras de _Vincent Van Gogh_ por movimento artístico.
