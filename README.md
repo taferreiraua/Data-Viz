@@ -29,7 +29,7 @@ Estudando meios de exploração e visualização de dados.
   
   ### **[_Demanda de energia elétrica no Brasil em 2022_](Brasil-ONS)**
   Visualizando o uso de energia elétrica no Brasil em 2022.
-  - 📦 Packages: `ggplot`, `ggtext`, `ggdraw`.
+  - 📦 Packages: `ggplot`, `ggtext`.
   - 💾 Dados: Operador Nacional do Sistema Elétrico (ONS).
   
   ![Screenshot](Brasil-ONS/BrasilONS.png)
